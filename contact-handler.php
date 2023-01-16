@@ -28,11 +28,11 @@ if (empty($errors)) {
 
     $email_subject = "Kontaktformular-Nachricht von: $name";
 
-    $email_body = "Neue Nachricht erhalten: \n" .
+    $email_body = "Neue Nachricht erhalten: \n\n" .
 
-        "Name: $name \n " .
+        "\tName: $name\n" .
 
-        "Email: $email_address\n Nachricht: \n $message";
+        "\tEmail: $email_address\n\nNachricht:\n\n$message";
 
     $headers = "Von: $myemail\n";
 
