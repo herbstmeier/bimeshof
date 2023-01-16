@@ -67,7 +67,8 @@ li.header-item.admin a {
     height: 5vh;
     z-index: 1;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(1px);
     transition: all 0.2s ease;
 }
 
@@ -119,6 +120,7 @@ nav {
     border: 1px solid black;
     border-radius: 5px;
     width: 5vw;
+    background-color: black;
 }
 
 .header-item.admin {
@@ -131,7 +133,7 @@ nav {
     }
 
     .admin {
-        bottom: 5%;
+        bottom: 10%;
     }
 
     .hamburger {
@@ -234,6 +236,8 @@ ul {
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
+    padding: 1rem 0;
+    box-sizing: border-box;
 }
 
 .categories-container li {
