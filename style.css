@@ -156,6 +156,10 @@ nav {
     .hamburger {
         display: none;
     }
+
+    .page {
+        background-attachment: fixed;
+    }
 }
 
 .page {
@@ -165,7 +169,6 @@ nav {
     scroll-snap-align: center;
     /* text-align: center; */
 
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -177,7 +180,7 @@ nav {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    padding: 10vh 10vw;
+    padding: 7vh 7vw;
 }
 
 /* #home .page-container {
@@ -366,4 +369,8 @@ ul {
 
 #impressum {
     background-image: url("img/Bimeshof045.JPG");
+}
+
+#thank-you {
+    background-image: url("img/Bimeshof045.JPG")
 }
