@@ -113,9 +113,17 @@ nav {
     width: 5vw;
 }
 
+.header-item.admin {
+    position: absolute;
+}
+
 @media only screen and (max-width: 800px) {
     .header:not(.expanded) .header-item:not(.main) {
         display: none;
+    }
+
+    .admin {
+        bottom: 0;
     }
 
     .hamburger {
@@ -127,6 +135,10 @@ nav {
     .header-item.main {
         position: absolute;
         left: 0;
+    }
+
+    .admin {
+        right: 0;
     }
 
     .header-item a:hover {
