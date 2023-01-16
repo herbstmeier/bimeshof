@@ -3,8 +3,24 @@ import { details } from "./details.js"
 let hamburgerOpen = false
 let detailSelected = -1
 
-function toggleHamburger() {
-    hamburgerOpen = !hamburgerOpen
+function toggleHamburger(_val) {
+    const header = document.getElementsByClassName('header')[0]
+
+    if (_val === false) {
+        hamburgerOpen = _val
+    } else {
+        hamburgerOpen = !hamburgerOpen
+    }
+
+    if (hamburgerOpen) {
+        header.classList.add('expanded')
+    } else {
+        header.classList.remove('expanded')
+    }
+}
+
+function collapseMenu() {
+    toggleHamburger(false)
 }
 
 function selectDetail(i) {
@@ -39,7 +55,8 @@ function detailClick(e) {
 }
 
 window.toggleHamburger = toggleHamburger
+window.collapseMenu = collapseMenu
 window.selectDetail = selectDetail
 window.detailClick = detailClick
 
-export { selectDetail, toggleHamburger, detailClick }
+export { selectDetail, toggleHamburger, collapseMenu, detailClick }
