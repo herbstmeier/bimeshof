@@ -34,12 +34,13 @@ body {
 }
 
 h1 {
-    font-size: calc(2.3vh + 6px);
+    font-size: calc(3vh + 1vw + 5px);
     margin-bottom: 4vh;
 }
 
 p,
-li {
+li,
+input {
     font-size: calc(1.3vh + 6px);
     line-height: 1.3;
 }
@@ -344,8 +345,8 @@ ul {
 
 .contact-form input,
 .contact-form textarea {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5vh;
+    margin-bottom: 1vh;
     box-sizing: border-box;
     background: rgb(255 255 255 / 60%);
     border: 1px solid black;
@@ -366,7 +367,6 @@ ul {
     margin: 1rem auto;
     padding: 0.5rem;
     background: rgb(255 255 255 / 60%);
-    font-weight: 600;
     cursor: pointer;
     border: 2px solid black;
 }

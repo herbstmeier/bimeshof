@@ -55,8 +55,7 @@ function centerCard() {
 }
 
 function detailClick(e) {
-    const card = document.getElementsByClassName('details-card')[0]
-    if (!e.path.includes(card)) {
+    if (!(e.target.className == 'details-card' || e.target.className == 'details-title' || e.target.className == 'details-text')) {
         selectDetail(-1)
     }
 }
