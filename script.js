@@ -25,6 +25,7 @@ function collapseMenu() {
 
 function selectDetail(i) {
     const detailsContainer = document.getElementsByClassName('details-container')[0]
+    const detailsCard = document.getElementsByClassName('details-card')[0]
 
     detailSelected = i
     if (i === -1) {
@@ -32,6 +33,7 @@ function selectDetail(i) {
     } else {
         fillDetails(i)
         centerCard()
+        detailsCard.scrollTop = 0
         detailsContainer.classList.remove('hidden')
     }
 }
