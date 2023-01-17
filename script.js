@@ -29,11 +29,9 @@ function selectDetail(i) {
 
     detailSelected = i
     if (i === -1) {
-        categoriesContainer.classList.remove('blur')
         detailsContainer.classList.add('hidden')
     } else {
         fillDetails(i)
-        categoriesContainer.classList.add('blur')
         detailsContainer.classList.remove('hidden')
     }
 }
