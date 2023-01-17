@@ -9,3 +9,21 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     echo "<p>You entered {$_SERVER['PHP_AUTH_PW']} as your password.</p>";
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form Handler</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="text" name="title">
+        <input type="text" name="text">
+        <input type="file" name="photo">
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
