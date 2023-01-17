@@ -25,13 +25,13 @@ function collapseMenu() {
 
 function selectDetail(i) {
     const detailsContainer = document.getElementsByClassName('details-container')[0]
-    const categoriesContainer = document.getElementsByClassName('categories-container')[0]
 
     detailSelected = i
     if (i === -1) {
         detailsContainer.classList.add('hidden')
     } else {
         fillDetails(i)
+        centerCard()
         detailsContainer.classList.remove('hidden')
     }
 }
@@ -42,6 +42,16 @@ function fillDetails(i) {
 
     title.innerHTML = details[i].title
     text.innerHTML = details[i].text
+}
+
+function centerCard() {
+    const detailsCard = document.getElementsByClassName('details-card')[0]
+    const cardContainer = document.getElementsByClassName('details-card-container')[0]
+    const iconClose = document.getElementsByClassName('icon-close')[0]
+
+    const ratioPercent = 100 * (detailsCard.offsetHeight / cardContainer.offsetHeight)
+
+    iconClose.style.top = (50-ratioPercent/2) + '%';
 }
 
 function detailClick(e) {
