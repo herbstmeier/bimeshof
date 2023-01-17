@@ -28,7 +28,6 @@ function selectDetail(i) {
     const categoriesContainer = document.getElementsByClassName('categories-container')[0]
 
     detailSelected = i
-    console.log('show detail ' + i)
     if (i === -1) {
         categoriesContainer.classList.remove('blur')
         detailsContainer.classList.add('hidden')
@@ -48,8 +47,8 @@ function fillDetails(i) {
 }
 
 function detailClick(e) {
-    const detailsContainer = document.getElementsByClassName('details-container')[0]
-    if (e.target == detailsContainer) {
+    const card = document.getElementsByClassName('details-card')[0]
+    if (!e.path.includes(card)) {
         selectDetail(-1)
     }
 }
