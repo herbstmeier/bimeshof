@@ -361,8 +361,7 @@ ul {
     resize: vertical;
 }
 
-
-.contact-submit {
+.custom-button {
     width: fit-content;
     margin: 1rem auto;
     padding: 0.5rem;
@@ -380,10 +379,12 @@ ul {
     flex-direction: column;
     line-height: 1.5;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
 .address-container div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
@@ -398,6 +399,7 @@ ul {
 
 .eu-pic {
     width: calc(10vw + 10rem);
+    margin-top: 2vh;
 }
 
 #home {
