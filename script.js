@@ -3,6 +3,22 @@ import { details } from "./details.js"
 let hamburgerOpen = false
 let detailSelected = -1
 
+if(document.URL.includes('index.html')) {
+    generateCategories()
+}
+
+function generateCategories() {
+    const list = document.getElementsByClassName('categories-list')[0]
+    
+    details.forEach(e => {
+        const element = document.createElement('li')
+        const text = document.createTextNode(e.title)
+        element.appendChild(text)
+        element.onclick = function() { selectDetail(details.indexOf(e)) }
+        list.appendChild(element)
+    });
+}
+
 function toggleHamburger(_val) {
     const header = document.getElementsByClassName('header')[0]
 

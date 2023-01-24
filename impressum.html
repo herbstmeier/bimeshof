@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script type="module" src="script.js" defer></script>
+    <title>Bimeshof</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul class="header-container">
+                <li class="header-item main"><a href="index.html#home">Startseite</a></li>
+                <li class="header-item"><a href="index.html#news">Aktuelles</a></li>
+                <li class="header-item"><a href="index.html#details">Über Uns</a></li>
+                <li class="header-item"><a href="index.html#contact">Kontakt</a></li>
+                <div class="header-item main hamburger" onclick="toggleHamburger()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="scroll-container">
+        <section class="page" id="impressum">
+
+            <div class="page-container">
+                <h1>Impressum</h1>
+                <div class="address-container">
+                    <p>Katja Herzinger</p>
+                    <p>Burgbergweg 3</p>
+                    <p>85276 Pfaffenhofen / Uttenhofen</p>
+                    <button class="custom-button">
+                        <a href="https://goo.gl/maps/1C3L7Gmb2jEpzKaZ6" target="_blank">
+                            <p>Auf Karte anzeigen</p>
+                        </a>
+                    </button>
+
+                    <p><a href="tel:00498441788217">08441 788217</a></p>
+                    <p><a href="mailto:info@bimeshof.de">info@bimeshof.de</a></p>
+
+                    <img class="eu-pic" src="img/eu.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="footer" id="footer">
+            <div class="footer-container">
+                <div class="links-container">
+                    <a href="impressum.html">
+                        <p>Impressum</p>
+                    </a>
+                    <a href="datenschutz.html">
+                        <p>Datenschutz</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

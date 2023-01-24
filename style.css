@@ -38,6 +38,16 @@ h1 {
     margin-bottom: 4vh;
 }
 
+h2 {
+    font-size: calc(2.5vh + 5px);
+    margin-bottom: 2vh;
+}
+
+h3 {
+    font-size: calc(2vh + 5px);
+    margin-bottom: 1vh;
+}
+
 p,
 li,
 input {
@@ -129,7 +139,7 @@ nav {
     position: absolute;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 999px) {
     .header:not(.expanded) .header-item:not(.main) {
         display: none;
     }
@@ -149,6 +159,14 @@ nav {
     .details-container {
         width: 100%;
         left: 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .details-container {
+        position: absolute;
     }
 }
 
@@ -178,20 +196,51 @@ nav {
         width: 80%;
         left: 10%;
     }
+
+    .about-container {
+        flex-direction: row;
+    }
+
+    .details-container {
+        position: relative;
+        left: 0;
+    }
 }
 
 .page {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    scroll-snap-align: center;
-    /* text-align: center; */
-
+    /* scroll-snap-align: center; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: color;
+}
+
+.footer {
+    width: 100%;
+    height: 5vh;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: color;
+}
+
+.page#data {
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow-y: scroll;
+}
+
+#data h3 {
+    margin-top: 1vh;
+}
+
+.data-generated {
+    margin-bottom: 1vh;
 }
 
 .page-container {
@@ -199,6 +248,9 @@ nav {
     height: 100vh;
     box-sizing: border-box;
     padding: 7vh 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* #home .page-container {
@@ -233,26 +285,29 @@ ul {
 
 .about-container {
     position: relative;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
 }
 
 .categories-container {
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .categories-container ul {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     list-style: none;
     align-items: center;
     padding: 1rem 0;
     box-sizing: border-box;
     gap: 1vh;
     width: fit-content;
+    justify-content: center;
 }
 
 .categories-container li {
@@ -271,7 +326,6 @@ ul {
 }
 
 .details-container {
-    position: absolute;
     top: 0;
     height: 100%;
     display: flex;
@@ -302,12 +356,13 @@ ul {
     width: max-content;
     width: 100%;
     max-height: 100%;
-    background: rgb(255 255 255 / 60%);
+    background: rgb(255 255 255 / 70%);
     padding: 1rem;
     box-sizing: border-box;
     overflow-y: auto;
     border: 1px solid black;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
+    text-align: center;
 }
 
 .details-title {
@@ -370,8 +425,8 @@ ul {
     border: 2px solid black;
 }
 
-.contact-submit:hover {
-    text-decoration: underline;
+.custom-button:hover {
+    background-color: rgb(255 255 255 / 90%);
 }
 
 .address-container {
@@ -402,6 +457,30 @@ ul {
     margin-top: 2vh;
 }
 
+.footer-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.links-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.links-container a:hover {
+    text-decoration: underline;
+}
+
 #home {
     background-image: url("img/Bimeshof174.JPG");
 }
@@ -411,15 +490,19 @@ ul {
 }
 
 #details {
-    background-image: url("img/Bimeshof177.JPG");
+    background-image: url("img/Bimeshof177_.JPG");
 }
 
 #contact {
     background-image: url("img/Bimeshof124.JPG");
 }
 
-#impressum {
-    background-image: url("img/Bimeshof045.JPG");
+#impressum, #data {
+    background-image: url("img/Bimeshof177_.jpg");
+}
+
+#footer {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 #thank-you {
