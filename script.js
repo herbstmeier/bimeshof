@@ -1,9 +1,11 @@
 import { details } from "./details.js"
+import { news } from "./news.js"
 
 let hamburgerOpen = false
 let detailSelected = -1
 
 if(document.URL.includes('index.html')) {
+    generateNews()
     generateCategories()
 }
 
@@ -15,6 +17,23 @@ function generateCategories() {
         const text = document.createTextNode(e.title)
         element.appendChild(text)
         element.onclick = function() { selectDetail(details.indexOf(e)) }
+        list.appendChild(element)
+    });
+}
+
+function generateNews() {
+    const list = document.getElementsByClassName('news-list')[0]
+    
+    news.forEach(e => {
+        const element = document.createElement('li')
+        const dateE = document.createElement('p')
+        const titleE = document.createElement('h4')
+        const date = document.createTextNode(e.date)
+        const title = document.createTextNode(e.title)
+        dateE.appendChild(date)
+        titleE.appendChild(title)
+        element.appendChild(dateE)
+        element.appendChild(titleE)
         list.appendChild(element)
     });
 }

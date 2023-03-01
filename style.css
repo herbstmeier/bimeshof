@@ -283,6 +283,18 @@ ul {
     list-style: square;
 }
 
+.news-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2vh;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .about-container {
     position: relative;
     display: flex;

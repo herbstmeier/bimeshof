@@ -1,6 +1,6 @@
 <?php
 $errors = '';
-$myemail = 'moritz.herbstmeier@gmx.de';
+$myemail = 'info@bimeshof.de';
 if (
     empty($_POST['name']) ||
     empty($_POST['email']) ||
