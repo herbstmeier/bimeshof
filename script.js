@@ -4,7 +4,7 @@ import { news } from "./news.js"
 let hamburgerOpen = false
 let detailSelected = -1
 
-if(document.URL.includes('index.html')) {
+if(!(document.URL.includes('impressum') || document.URL.includes('datenschutz'))) {
     generateNews()
     generateCategories()
 }
