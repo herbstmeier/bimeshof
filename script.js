@@ -17,6 +17,8 @@ function generateCategories() {
         const text = document.createTextNode(e.title)
         element.appendChild(text)
         element.onclick = function() { selectDetail(details.indexOf(e)) }
+        element.onkeydown = element.onclick
+        element.tabIndex = 0
         list.appendChild(element)
     });
 }

@@ -77,7 +77,7 @@
                     </div>
                     <div class="details-container hidden" onclick="detailClick(event)">
                         <div class="details-card-container">
-                            <div class="icon-close" onclick="selectDetail(-1)">X</div>
+                            <div class="icon-close" onclick="selectDetail(-1)" tabindex="0" onkeydown="selectDetail(-1)">X</div>
                             <div class="details-card">
                                 <h3 class="details-title"></h3>
                                 <p class="details-text"></p>
@@ -95,11 +95,11 @@
                 <h1>Kontakt</h1>
                 <div class="contact-form-container">
                     <form class="contact-form" action="contact-handler.php" method="post" name="contact_form">
-                        <p>Name:</p>
+                        <label for="name"><p>Name:</p></label>
                         <input class="contact-name" type="text" name="name">
-                        <p>Email:</p>
+                        <label for="email"><p>Email:</p></label>
                         <input class="contact-email" type="email" name="email">
-                        <p>Deine Nachricht:</p>
+                        <label for="message"><p>Deine Nachricht:</p></label>
                         <textarea class="contact-input" type="text" name="message"></textarea>
                         <button class="custom-button" type="submit">
                             <p>Absenden</p>
